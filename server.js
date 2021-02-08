@@ -10,8 +10,6 @@ app.use(helmet());
 app.use(express.static(join(__dirname, "build")));
 
 const PORT = process.env.PORT || 3000;
-console.log(PORT)
-console.log("TEST")
 app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });

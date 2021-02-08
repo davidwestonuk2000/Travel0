@@ -12,8 +12,8 @@
     "server:dev": "nodemon server.js",
     "api-server": "node api-server.js",
     "api-server:dev": "nodemon api-server.js",
-    "dev": "npm-run-all --parallel spa api-server:dev",
-    "prod": "npm-run-all --parallel server api-server"
+    "dev": "node server.js",
+    "prod": "node server.js"
   },
   "dependencies": {
     "@auth0/auth0-react": "^1.2.0",
