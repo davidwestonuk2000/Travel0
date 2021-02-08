@@ -4,7 +4,8 @@ const helmet = require("helmet");
 const { join } = require("path");
 
 const app = express();
-
+console.log("here")
+console.log(process.env.PORT)
 const port = process.env.PORT || 3000;
 
 app.use(morgan("dev"));
