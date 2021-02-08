@@ -1,8 +1,8 @@
 {
   "domain": "dev--bbslvb1.eu.auth0.com",
   "clientId": "8J8qbndUUilP7UcWYApLi4jDAZvgItD5",
-  "audience": "https://dev--bbslvb1.eu.auth0.com/api/v2/",
-  "scope": "read:current_user update:current_user_metadata",
-  "appOrigin": "http://localhost:3000)",
+  "audience": "",
+  "scope": "",
+  "appOrigin": "http://localhost:3000",
   "apiOrigin": "http://localhost:3001"
 }
