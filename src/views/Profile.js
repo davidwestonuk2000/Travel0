@@ -9,15 +9,13 @@ import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
 
 export const ProfileComponent = () => {
   const { user } = useAuth0();
-  var countries = require("i18n-iso-countries");
+  var countries = require("i18n-iso-countries"); // for converting country to country code
   countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
-
-  console.log(user.email)
-  console.log(user.["https://example.com/country"])
-  var userCountry = user.["https://example.com/country"].toString()
-  var countryCode = countries.getAlpha2Code(userCountry, "en")
-  var flagSource = "https://www.countryflags.io/"+countryCode+"/flat/64.png"
-
+  var userCountry = user.["https://example.com/country"].toString() // get the user country from Auth0 profile
+  var countryCode = countries.getAlpha2Code(userCountry, "en") // convert the country description to the ISO country code
+  var flagSource = "https://www.countryflags.io/"+countryCode+"/flat/64.png" // use the ISO country code to get a flag image source
+  
+  // return HTML including the country flag image
   return (
 
     <Container className="mb-5">
